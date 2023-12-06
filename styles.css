@@ -1,0 +1,169 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
+
+*, *::before, *::after {
+	box-sizing: border-box;
+}
+
+:root {
+	--soft-blue: hsl(215, 51%, 70%);
+	--cyan: hsl(178, 100%, 50%);
+	--main-bg-dark-blue: hsl(217, 54%, 11%);
+	--card-bg-dark-blue: hsl(216, 50%, 16%);
+	--line-dark-blue: hsl(215, 32%, 27%);
+	--white: hsl(0, 0%, 100%);
+}
+
+h3, p {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	font-family: 'Outfit', sans-serif;
+}
+
+main {
+	width: 100%;
+	min-height: 100vh;
+	display: grid;
+	place-content: center;
+	background-color: var(--main-bg-dark-blue);
+}
+
+section {
+	max-width: 285px;
+	width: 100%;
+	padding: 16px;
+	border-radius: 23px;
+	background-color: var(--card-bg-dark-blue);
+}
+
+.outer-container {
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
+}
+
+.outer-container>h3 {
+	color: var(--white);
+	font-weight: 600;
+}
+
+.outer-container>h3:hover {
+	color: var(--cyan);
+	cursor: pointer;
+	transition: color 0.3s ease-out;
+}
+
+.outer-container>p {
+	color: var(--soft-blue);
+}
+
+.image-container {
+	position: relative;
+	flex-shrink: 0;
+	cursor: pointer;
+}
+
+.image-container:hover .overlay {
+	opacity: 0.4;
+}
+
+.image-container:hover .icon-view {
+	opacity: 1;
+}
+
+.overlay {
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	background-color: var(--cyan);
+	border-radius: 7px;
+	opacity: 0;
+	transition: opacity 0.3s ease-out;
+}
+
+.icon-view {
+	width: 45px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	opacity: 0;
+	z-index: 999;
+	transition: opacity 0.3s ease-out;
+}
+
+img {
+	display: block;
+	width: 100%;
+	border-radius: 7px;
+}
+
+.info-container {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+img.clock {
+	width: 16px;
+}
+
+img.ethereum {
+	width: 10px;
+}
+
+.ethereum-container, .time {
+	display: flex;
+	align-items: center;
+	gap: 0.3rem;
+	font-size: 14px;
+}
+
+span#eth {
+	font-weight: 400;
+	color: var(--cyan);
+}
+
+span#time {
+	color: var(--soft-blue);
+}
+
+.footer {
+	border-top: 1px solid var(--line-dark-blue);
+	padding-block: 1rem;
+}
+
+.footer-info {
+	display: flex;
+	align-items: center;
+	gap: 1rem;
+}
+
+.avatar-container {
+	width: 30px;
+	height: 30px;
+	border: 1px solid var(--white);
+	border-radius: 100%;
+}
+
+img.avatar {
+	width: 100%;
+}
+
+.creator {
+	color: var(--soft-blue);
+}
+
+a#name {
+	text-decoration: none;
+	color: var(--white);
+	transition: color 0.3s ease-out;
+}
+
+a#name:hover {
+	color: var(--cyan);
+}
