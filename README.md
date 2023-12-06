@@ -18,6 +18,9 @@ This is a solution to the [NFT preview card component challenge on Frontend Ment
 **Desktop Preview**
 ![NFT Desktop Preview](./assets/nft-desktop.png)
 
+**Hover Preview**
+![NFT Hover Preview](./assets/nft-hover.png)
+
 **Mobile Preview**
 ![NFT Mobile Preview](./assets/nft-mobile.png)
 
